@@ -35,16 +35,21 @@
 window.onload = init();
 
 function init(){
+   //makes calcButtons contain the page element for calcButton class
    var calcButtons = document.getElementsByClassName("calcButton");
+   //makes all button in the calcButtons respond to the click
    for(var i = 0; i<calcButtons.length; i++){
       calcButtons[i].addEventListener("click", buttonClick);
    }
    document.getElementById("calcWindow").addEventListener("keydown", calcKeys);
 }
-
+//used to change what appears in the window when buttons are clicked
 function buttonClick(e){
+   // value equal to the text window
    var calcValue = document.getElementById("calcWindow").value;
+   // var equal to the attribute of the decimal input box
    var calcDecimal = document.getElementById("decimals").value;
+   // store the other button values in a switch
    var buttonValue = e.target.value;
    switch(buttonValue){
       case ("del"):

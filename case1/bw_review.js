@@ -45,7 +45,6 @@ function init() {
    document.getElementById("comment").addEventListener("keyup", updateCount);
 }
 
-
 function lightStars(e) {
    var starNumber = e.target.alt;
    var stars = document.querySelectorAll("span#stars img");
